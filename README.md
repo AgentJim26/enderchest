@@ -26,6 +26,12 @@ mvn package
 
 The shaded plugin jar is written to `target/EnderChest-1.1.0.jar`.
 
+## Configuration
+
+`plugins/EnderChest/config.yml`:
+
+- `command-enabled` (default `false`): enables the `/ec` and `/enderchest` commands. The GUI is always available by right-clicking an ender chest.
+
 ## Notes
 
 - The vanilla sign editor always focuses its first line; the plugin strips a leading `Search:` prefix and also reads lines 2-4, so typing after the label or on the next line both work.

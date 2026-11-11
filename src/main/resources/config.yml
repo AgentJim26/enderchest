@@ -1,0 +1,3 @@
+# Set to true to enable the /ec and /enderchest commands.
+# The ender chest GUI is always available by right-clicking an ender chest.
+command-enabled: false

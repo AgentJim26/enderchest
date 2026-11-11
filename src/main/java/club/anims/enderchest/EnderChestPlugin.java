@@ -79,6 +79,7 @@ public class EnderChestPlugin extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
+        saveDefaultConfig();
         try {
             store = new EcStore(getDataFolder());
         } catch (Exception ex) {
@@ -115,6 +116,10 @@ public class EnderChestPlugin extends JavaPlugin implements Listener {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        if (!getConfig().getBoolean("command-enabled", false)) {
+            sender.sendMessage("The /ec command is disabled. Right-click an ender chest instead.");
+            return true;
+        }
         if (!(sender instanceof Player player)) {
             sender.sendMessage("Only players can open an ender chest.");
             return true;
