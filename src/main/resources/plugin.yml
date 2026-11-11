@@ -1,0 +1,15 @@
+name: EnderChest
+version: '${project.version}'
+main: club.anims.enderchest.EnderChestPlugin
+api-version: '26.3'
+description: Paged ender chest storage with sorting, search, and page upgrades.
+author: Jim
+commands:
+  ec:
+    description: Open your ender chest
+    aliases: [enderchest]
+    permission: enderchest.use
+permissions:
+  enderchest.use:
+    description: Allows opening the paged ender chest
+    default: true
